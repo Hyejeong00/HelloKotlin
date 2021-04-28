@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() { //퍼블릭이 디폴트
 
         val btnJava = findViewById<Button>(R.id.btnJava)
         val btnKotlin = findViewById<Button>(R.id.btnKotlin)
+        val btnVarJava = findViewById<Button>(R.id.btnVarJava)
+        val btnVarKotlin = findViewById<Button>(R.id.btnVarKotlin)
 
         var intent : Intent
 
@@ -25,6 +27,12 @@ class MainActivity : AppCompatActivity() { //퍼블릭이 디폴트
         btnKotlin.setOnClickListener {
             intent = Intent(this@MainActivity, BmiKotlinActivity::class.java)
             startActivity(intent)
+        }
+        btnVarJava.setOnClickListener {
+            startActivity(Intent(this@MainActivity, VariableJavaActivity::class.java))
+        }
+        btnVarKotlin.setOnClickListener {
+            startActivity(Intent(this@MainActivity, VariableKotlinActivity::class.java))
         }
     }
 }
